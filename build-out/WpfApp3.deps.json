@@ -1,0 +1,31 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "WpfApp3/1.0.0": {
+        "runtime": {
+          "WpfApp3.dll": {}
+        },
+        "resources": {
+          "en/WpfApp3.resources.dll": {
+            "locale": "en"
+          },
+          "ru/WpfApp3.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WpfApp3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

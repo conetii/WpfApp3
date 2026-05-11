@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>WpfApp3 - Тёмный блокнот</value>
+  </data>
+  <data name="NavWorkspace" xml:space="preserve">
+    <value>Рабочее пространство</value>
+  </data>
+  <data name="NavBackTooltip" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="NavForwardTooltip" xml:space="preserve">
+    <value>Вперёд</value>
+  </data>
+  <data name="MenuFile" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="MenuNew" xml:space="preserve">
+    <value>Новый файл</value>
+  </data>
+  <data name="MenuChooseStorage" xml:space="preserve">
+    <value>Выбрать хранилище</value>
+  </data>
+  <data name="MenuSave" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="MenuCloseDocument" xml:space="preserve">
+    <value>Закрыть документ</value>
+  </data>
+  <data name="MenuDeleteDocument" xml:space="preserve">
+    <value>Удалить файл</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="MenuExit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="MenuEdit" xml:space="preserve">
+    <value>Правка</value>
+  </data>
+  <data name="MenuUndo" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="MenuRedo" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="MenuSearch" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="MenuFind" xml:space="preserve">
+    <value>Найти</value>
+  </data>
+  <data name="MenuClearSearch" xml:space="preserve">
+    <value>Очистить поиск</value>
+  </data>
+  <data name="MenuHelp" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="MenuHelpPage" xml:space="preserve">
+    <value>О приложении</value>
+  </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>Язык интерфейса</value>
+  </data>
+  <data name="ChooseStorageButton" xml:space="preserve">
+    <value>Выбрать папку</value>
+  </data>
+  <data name="ChooseStorageDialogDescription" xml:space="preserve">
+    <value>Выберите папку, которая станет хранилищем файлов.</value>
+  </data>
+  <data name="StorageSelectorTooltip" xml:space="preserve">
+    <value>Нажмите, чтобы выбрать папку хранилища.</value>
+  </data>
+  <data name="StorageRootLabel" xml:space="preserve">
+    <value>Хранилище</value>
+  </data>
+  <data name="StorageTreeLabel" xml:space="preserve">
+    <value>Дерево файлов</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Поиск по названию и содержимому текстовых файлов</value>
+  </data>
+  <data name="SearchDialogTitle" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="SearchDialogPrompt" xml:space="preserve">
+    <value>Введите строку для поиска по названиям файлов и содержимому текстовых файлов.</value>
+  </data>
+  <data name="SearchDialogApply" xml:space="preserve">
+    <value>Найти</value>
+  </data>
+  <data name="SearchDialogCancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="StorageEmptyMessage" xml:space="preserve">
+    <value>В хранилище пока нет подходящих файлов.</value>
+  </data>
+  <data name="StorageUnavailableMessage" xml:space="preserve">
+    <value>Папка хранилища ещё не выбрана.</value>
+  </data>
+  <data name="NoStorageSelected" xml:space="preserve">
+    <value>Папка не выбрана</value>
+  </data>
+  <data name="DocumentLabel" xml:space="preserve">
+    <value>Текущий документ</value>
+  </data>
+  <data name="DocumentEmpty" xml:space="preserve">
+    <value>Документ не открыт</value>
+  </data>
+  <data name="UntitledDocument" xml:space="preserve">
+    <value>Новый файл</value>
+  </data>
+  <data name="StatusSaved" xml:space="preserve">
+    <value>Сохранено</value>
+  </data>
+  <data name="StatusUnsaved" xml:space="preserve">
+    <value>Есть несохранённые изменения</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="SettingsDescription" xml:space="preserve">
+    <value>Здесь можно переключать язык интерфейса и видеть, какая папка выбрана как основное хранилище проекта.</value>
+  </data>
+  <data name="SettingsStorageLabel" xml:space="preserve">
+    <value>Текущее хранилище</value>
+  </data>
+  <data name="HelpTitle" xml:space="preserve">
+    <value>Зачем нужно приложение</value>
+  </data>
+  <data name="HelpDescription" xml:space="preserve">
+    <value>Приложение объединяет функции простого блокнота и организованного хранилища файлов в одном окне.</value>
+  </data>
+  <data name="HelpSectionStorageTitle" xml:space="preserve">
+    <value>Хранилище</value>
+  </data>
+  <data name="HelpSectionStorageBody" xml:space="preserve">
+    <value>Вы выбираете папку, а приложение показывает дерево её подпапок и файлов. Это заменяет разрозненное открытие отдельных документов.</value>
+  </data>
+  <data name="HelpSectionSearchTitle" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="HelpSectionSearchBody" xml:space="preserve">
+    <value>Поиск работает по именам всех файлов и по содержимому текстовых файлов, поэтому нужные заметки и документы можно быстро находить внутри всего хранилища.</value>
+  </data>
+  <data name="HelpSectionEditorTitle" xml:space="preserve">
+    <value>Редактирование</value>
+  </data>
+  <data name="HelpSectionEditorBody" xml:space="preserve">
+    <value>Редактор позволяет создавать новые файлы, открывать их из дерева, сохранять изменения и отменять или повторять действия через меню Правка. Бинарные файлы открываются в режиме безопасного предпросмотра.</value>
+  </data>
+  <data name="DialogInfoTitle" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="DialogErrorTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="DialogConfirmTitle" xml:space="preserve">
+    <value>Подтверждение</value>
+  </data>
+  <data name="MessageUnsavedChanges" xml:space="preserve">
+    <value>Есть несохранённые изменения. Сохранить их сейчас?</value>
+  </data>
+  <data name="MessageSelectStorageFolder" xml:space="preserve">
+    <value>Сначала выберите папку хранилища.</value>
+  </data>
+  <data name="MessageLoadStorageFailed" xml:space="preserve">
+    <value>Не удалось прочитать структуру выбранного хранилища.</value>
+  </data>
+  <data name="MessageReadFileFailed" xml:space="preserve">
+    <value>Не удалось открыть выбранный файл.</value>
+  </data>
+  <data name="MessageSaveFileFailed" xml:space="preserve">
+    <value>Не удалось сохранить текущий файл.</value>
+  </data>
+  <data name="MessageDeleteFileConfirm" xml:space="preserve">
+    <value>Удалить текущий файл из хранилища?</value>
+  </data>
+  <data name="MessageDeleteFileFailed" xml:space="preserve">
+    <value>Не удалось удалить текущий файл.</value>
+  </data>
+  <data name="MessageNoFileToDelete" xml:space="preserve">
+    <value>Сейчас нет открытого файла, который можно удалить.</value>
+  </data>
+  <data name="EditCut" xml:space="preserve">
+    <value>Вырезать</value>
+  </data>
+  <data name="EditCopy" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="EditPaste" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="EditSelectAll" xml:space="preserve">
+    <value>Выделить всё</value>
+  </data>
+  <data name="TreeContextCreateFile" xml:space="preserve">
+    <value>Создать файл</value>
+  </data>
+  <data name="TreeContextRenameFile" xml:space="preserve">
+    <value>Переименовать файл</value>
+  </data>
+  <data name="TreeContextDeleteFile" xml:space="preserve">
+    <value>Удалить файл</value>
+  </data>
+  <data name="FileNameDialogCreateTitle" xml:space="preserve">
+    <value>Создать файл</value>
+  </data>
+  <data name="FileNameDialogCreatePrompt" xml:space="preserve">
+    <value>Введите имя нового файла.</value>
+  </data>
+  <data name="FileNameDialogRenameTitle" xml:space="preserve">
+    <value>Переименовать файл</value>
+  </data>
+  <data name="FileNameDialogRenamePrompt" xml:space="preserve">
+    <value>Введите новое имя файла.</value>
+  </data>
+  <data name="DialogCreate" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="DialogRename" xml:space="preserve">
+    <value>Переименовать</value>
+  </data>
+  <data name="DialogCancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="MessageFileAlreadyExists" xml:space="preserve">
+    <value>Файл с таким именем уже существует.</value>
+  </data>
+  <data name="MessageCreateFileFailed" xml:space="preserve">
+    <value>Не удалось создать новый файл.</value>
+  </data>
+  <data name="MessageRenameFileFailed" xml:space="preserve">
+    <value>Не удалось переименовать файл.</value>
+  </data>
+  <data name="MessageDeleteNamedFileConfirm" xml:space="preserve">
+    <value>Удалить файл "{0}"?</value>
+  </data>
+  <data name="StatusBinaryPreview" xml:space="preserve">
+    <value>Бинарный предпросмотр</value>
+  </data>
+  <data name="MessageBinarySaveUnavailable" xml:space="preserve">
+    <value>Бинарный файл открыт в режиме предпросмотра. Сохранение текста в него отключено.</value>
+  </data>
+  <data name="MessageBinaryOpenedReadOnly" xml:space="preserve">
+    <value>Файл определён как бинарный. Он открыт в режиме предпросмотра без редактирования и сохранения.</value>
+  </data>
+  <data name="MenuOpenFolder" xml:space="preserve">
+    <value>Открыть папку</value>
+  </data>
+  <data name="MenuOpenEncryptedStorage" xml:space="preserve">
+    <value>Открыть зашифрованное хранилище</value>
+  </data>
+  <data name="MenuCreateEncryptedStorage" xml:space="preserve">
+    <value>Создать зашифрованное хранилище</value>
+  </data>
+  <data name="MenuCloseStorage" xml:space="preserve">
+    <value>Закрыть хранилище</value>
+  </data>
+  <data name="CreateEncryptedStorageDialogTitle" xml:space="preserve">
+    <value>Создание зашифрованного хранилища</value>
+  </data>
+  <data name="OpenEncryptedStorageDialogTitle" xml:space="preserve">
+    <value>Открытие зашифрованного хранилища</value>
+  </data>
+  <data name="NewEncryptedStorageFileName" xml:space="preserve">
+    <value>Новое хранилище</value>
+  </data>
+  <data name="PasswordDialogUnlockTitle" xml:space="preserve">
+    <value>Разблокировка хранилища</value>
+  </data>
+  <data name="PasswordDialogUnlockPrompt" xml:space="preserve">
+    <value>Введите пароль для выбранного зашифрованного хранилища.</value>
+  </data>
+  <data name="PasswordDialogUnlockAction" xml:space="preserve">
+    <value>Разблокировать</value>
+  </data>
+  <data name="PasswordDialogCreateTitle" xml:space="preserve">
+    <value>Создание зашифрованного хранилища</value>
+  </data>
+  <data name="PasswordDialogCreatePrompt" xml:space="preserve">
+    <value>Введите и подтвердите пароль для нового зашифрованного хранилища.</value>
+  </data>
+  <data name="PasswordDialogCreateAction" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="PasswordDialogPasswordLabel" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PasswordDialogConfirmPasswordLabel" xml:space="preserve">
+    <value>Подтверждение пароля</value>
+  </data>
+  <data name="PasswordDialogEmptyValidation" xml:space="preserve">
+    <value>Введите пароль.</value>
+  </data>
+  <data name="PasswordDialogMismatchValidation" xml:space="preserve">
+    <value>Пароли не совпадают.</value>
+  </data>
+  <data name="StorageLockedMessage" xml:space="preserve">
+    <value>Зашифрованное хранилище выбрано, но сейчас заблокировано.</value>
+  </data>
+  <data name="StorageMissingMessage" xml:space="preserve">
+    <value>Выбранное хранилище недоступно.</value>
+  </data>
+  <data name="MessageSelectStorageFirst" xml:space="preserve">
+    <value>Сначала откройте папку или зашифрованное хранилище.</value>
+  </data>
+  <data name="MessageUnlockStorageFirst" xml:space="preserve">
+    <value>Сначала разблокируйте выбранное зашифрованное хранилище.</value>
+  </data>
+  <data name="MessageEncryptedInvalidPassword" xml:space="preserve">
+    <value>Неверный пароль.</value>
+  </data>
+  <data name="MessageEncryptedArchiveCorrupted" xml:space="preserve">
+    <value>Файл зашифрованного хранилища поврежден или имеет неподдерживаемый формат.</value>
+  </data>
+  <data name="MessageCryptographyMissing" xml:space="preserve">
+    <value>В Python не установлен пакет cryptography. Установите зависимости из файла Python/requirements.txt.</value>
+  </data>
+  <data name="MessagePythonNotFound" xml:space="preserve">
+    <value>На компьютере не найден Python launcher py -3.</value>
+  </data>
+  <data name="MessageEncryptedCliMissing" xml:space="preserve">
+    <value>Во внутреннем каталоге приложения не найден скрипт для работы с зашифрованным хранилищем.</value>
+  </data>
+  <data name="MessageEncryptedOperationTimedOut" xml:space="preserve">
+    <value>Операция с зашифрованным хранилищем выполнялась слишком долго и была остановлена.</value>
+  </data>
+  <data name="MessageEncryptedOperationFailed" xml:space="preserve">
+    <value>Операция с зашифрованным хранилищем завершилась ошибкой.</value>
+  </data>
+  <data name="MessageEncryptedPackFailed" xml:space="preserve">
+    <value>Не удалось перепаковать и сохранить зашифрованное хранилище.</value>
+  </data>
+  <data name="MessageOpenStorageFailed" xml:space="preserve">
+    <value>Не удалось открыть выбранное хранилище.</value>
+  </data>
+  <data name="MenuUnlockStorage" xml:space="preserve">
+    <value>Разблокировать хранилище</value>
+  </data>
+  <data name="StorageUnlockButton" xml:space="preserve">
+    <value>Разблокировать</value>
+  </data>
+  <data name="StorageUnlockTooltip" xml:space="preserve">
+    <value>Ввести пароль для выбранного зашифрованного хранилища</value>
+  </data>
+  <data name="TreeContextUnlockStorage" xml:space="preserve">
+    <value>Разблокировать хранилище</value>
+  </data>
+  <data name="MenuOpenFile" xml:space="preserve">
+    <value>Открыть файл</value>
+  </data>
+  <data name="MenuSaveAs" xml:space="preserve">
+    <value>Сохранить как</value>
+  </data>
+  <data name="ThemeLabel" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Тёмная</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="OpenDocumentDialogTitle" xml:space="preserve">
+    <value>Открыть файл</value>
+  </data>
+  <data name="SaveDocumentAsDialogTitle" xml:space="preserve">
+    <value>Сохранить как</value>
+  </data>
+  <data name="DocumentDialogFilter" xml:space="preserve">
+    <value>Все файлы (*.*)|*.*|Текстовые документы (*.txt)|*.txt</value>
+  </data>
+  <data name="MessageFileOutsideStoragePrompt" xml:space="preserve">
+    <value>Файл находится вне текущего хранилища. Переключиться на папку файла?</value>
+  </data>
+  <data name="StatusOutsideStorage" xml:space="preserve">
+    <value>Файл вне дерева хранилища</value>
+  </data>
+  <data name="StatusOutsideStorageUnsaved" xml:space="preserve">
+    <value>Есть изменения, файл вне дерева хранилища</value>
+  </data>
+  <data name="StatusOutsideStorageReadOnly" xml:space="preserve">
+    <value>Только чтение, файл вне дерева хранилища</value>
+  </data>
+</root>

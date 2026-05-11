@@ -1,0 +1,421 @@
+﻿<Page x:Class="WpfApp3.Pages.QuickStartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Title="QuickStartPage"
+      Background="{DynamicResource WindowBackgroundBrush}">
+    <Page.Resources>
+        <Style x:Key="SurfaceCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="{DynamicResource SurfaceBackgroundBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="24"/>
+        </Style>
+        <Style x:Key="WizardTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="{DynamicResource SurfaceMutedBackgroundBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="MinHeight" Value="38"/>
+            <Setter Property="CaretBrush" Value="{DynamicResource TextHighlightBrush}"/>
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+                    <Setter Property="Background" Value="{DynamicResource ControlFocusBackgroundBrush}"/>
+                </Trigger>
+                <Trigger Property="Tag" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource DangerBorderBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="WizardPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Background" Value="{DynamicResource SurfaceMutedBackgroundBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="MinHeight" Value="38"/>
+            <Setter Property="CaretBrush" Value="{DynamicResource TextHighlightBrush}"/>
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+                    <Setter Property="Background" Value="{DynamicResource ControlFocusBackgroundBrush}"/>
+                </Trigger>
+                <Trigger Property="Tag" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource DangerBorderBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ScenarioCardStyle" TargetType="RadioButton">
+            <Setter Property="Background" Value="{DynamicResource SurfaceMutedBackgroundBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="Margin" Value="0,0,16,16"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="Card" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Card" Property="Background" Value="{DynamicResource PanelHoverBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Card" Property="Background" Value="{DynamicResource PanelPressedBrush}"/>
+                                <Setter TargetName="Card" Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ChoiceChipStyle" TargetType="RadioButton">
+            <Setter Property="Background" Value="{DynamicResource SurfaceMutedBackgroundBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="14,8"/>
+            <Setter Property="Margin" Value="0,0,12,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="Chip" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="20" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Chip" Property="Background" Value="{DynamicResource PanelHoverBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Chip" Property="Background" Value="{DynamicResource AccentBrush}"/>
+                                <Setter TargetName="Chip" Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource TextInvertedBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{DynamicResource WindowBackgroundBrush}">
+        <Grid Margin="24" Background="{DynamicResource WindowBackgroundBrush}">
+            <Grid MaxWidth="1080" HorizontalAlignment="Left">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <WrapPanel Grid.Row="0" Margin="0,0,0,20">
+                    <Border Width="690" Margin="0,0,20,20" Style="{StaticResource SurfaceCardStyle}">
+                        <StackPanel>
+                            <TextBlock FontSize="30" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Quick Start"/>
+                            <TextBlock Margin="0,12,0,0" FontSize="15" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="Choose how to start this session: folder workspace, encrypted storage, or a single file. The page only collects and validates the launch request."/>
+                        </StackPanel>
+                    </Border>
+                    <Border Width="330" Margin="0,0,0,20" Background="{DynamicResource PanelBackgroundBrush}" BorderBrush="{DynamicResource ControlBorderBrush}" BorderThickness="1" CornerRadius="8" Padding="20">
+                        <StackPanel>
+                            <TextBlock FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource AccentAltBrush}" Text="Three-step flow"/>
+                            <TextBlock Margin="0,14,0,0" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" Text="1. Pick the scenario."/>
+                            <TextBlock Margin="0,8,0,0" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" Text="2. Fill in the details."/>
+                            <TextBlock Margin="0,8,0,0" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" Text="3. Review and launch."/>
+                        </StackPanel>
+                    </Border>
+                </WrapPanel>
+
+                <Border Grid.Row="1" Margin="0,0,0,20" Style="{StaticResource SurfaceCardStyle}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="32"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="32"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <Border Width="36" Height="36" CornerRadius="18" BorderThickness="1" HorizontalAlignment="Left">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="{DynamicResource SurfaceMutedBackgroundBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderBrush}"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsStep1Complete}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource AccentAltBrush}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource AccentAltBrush}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding CurrentStep}" Value="1">
+                                                <Setter Property="Background" Value="{DynamicResource AccentBrush}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Text="1">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsStep1Complete}" Value="True">
+                                                    <Setter Property="Foreground" Value="{DynamicResource TextInvertedBrush}"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CurrentStep}" Value="1">
+                                                    <Setter Property="Foreground" Value="{DynamicResource TextInvertedBrush}"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Border>
+                            <TextBlock Margin="0,10,0,0" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Scenario"/>
+                            <TextBlock Margin="0,4,0,0" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" Text="Choose the starting point"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Height="2" Margin="0,17" VerticalAlignment="Top">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Background" Value="{DynamicResource ControlBorderBrush}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsStep1Complete}" Value="True">
+                                            <Setter Property="Background" Value="{DynamicResource AccentAltBrush}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                        </Border>
+                        <StackPanel Grid.Column="2">
+                            <Border Width="36" Height="36" CornerRadius="18" BorderThickness="1" HorizontalAlignment="Left">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="{DynamicResource SurfaceMutedBackgroundBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderBrush}"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsStep2Complete}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource AccentAltBrush}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource AccentAltBrush}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding CurrentStep}" Value="2">
+                                                <Setter Property="Background" Value="{DynamicResource AccentBrush}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Text="2">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsStep2Complete}" Value="True">
+                                                    <Setter Property="Foreground" Value="{DynamicResource TextInvertedBrush}"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CurrentStep}" Value="2">
+                                                    <Setter Property="Foreground" Value="{DynamicResource TextInvertedBrush}"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Border>
+                            <TextBlock Margin="0,10,0,0" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Details"/>
+                            <TextBlock Margin="0,4,0,0" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" Text="Fill in the required fields"/>
+                        </StackPanel>
+                        <Border Grid.Column="3" Height="2" Margin="0,17" VerticalAlignment="Top">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Background" Value="{DynamicResource ControlBorderBrush}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsStep2Complete}" Value="True">
+                                            <Setter Property="Background" Value="{DynamicResource AccentAltBrush}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                        </Border>
+                        <StackPanel Grid.Column="4">
+                            <Border Width="36" Height="36" CornerRadius="18" BorderThickness="1" HorizontalAlignment="Left">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="{DynamicResource SurfaceMutedBackgroundBrush}"/>
+                                        <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderBrush}"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding CurrentStep}" Value="3">
+                                                <Setter Property="Background" Value="{DynamicResource AccentBrush}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Text="3">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding CurrentStep}" Value="3">
+                                                    <Setter Property="Foreground" Value="{DynamicResource TextInvertedBrush}"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Border>
+                            <TextBlock Margin="0,10,0,0" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Launch"/>
+                            <TextBlock Margin="0,4,0,0" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" Text="Review the request"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="2" Margin="0,0,0,20" Style="{StaticResource SurfaceCardStyle}">
+                    <Grid>
+                        <StackPanel Visibility="{Binding Step1Visibility}">
+                            <TextBlock FontSize="24" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Choose a starting point"/>
+                            <TextBlock Margin="0,12,0,0" FontSize="14" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="Pick the setup shape first. The page stays decoupled from the real launch logic and only prepares a validated request."/>
+                            <WrapPanel Margin="0,24,0,0" ItemWidth="305">
+                                <RadioButton GroupName="ScenarioSelection" IsChecked="{Binding IsFolderScenarioSelected, Mode=TwoWay}" Style="{StaticResource ScenarioCardStyle}">
+                                    <StackPanel>
+                                        <Border Width="56" Height="4" Background="{DynamicResource AccentBrush}" CornerRadius="2"/>
+                                        <TextBlock Margin="0,16,0,0" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Folder workspace"/>
+                                        <TextBlock Margin="0,10,0,0" FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="Open an existing folder as the workspace root and keep the tree-first workflow."/>
+                                    </StackPanel>
+                                </RadioButton>
+                                <RadioButton GroupName="ScenarioSelection" IsChecked="{Binding IsEncryptedScenarioSelected, Mode=TwoWay}" Style="{StaticResource ScenarioCardStyle}">
+                                    <StackPanel>
+                                        <Border Width="56" Height="4" Background="{DynamicResource AccentAltBrush}" CornerRadius="2"/>
+                                        <TextBlock Margin="0,16,0,0" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Encrypted storage"/>
+                                        <TextBlock Margin="0,10,0,0" FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="Unlock an existing `.wstore` archive or prepare a new protected storage."/>
+                                    </StackPanel>
+                                </RadioButton>
+                                <RadioButton GroupName="ScenarioSelection" IsChecked="{Binding IsSingleFileScenarioSelected, Mode=TwoWay}" Style="{StaticResource ScenarioCardStyle}">
+                                    <StackPanel>
+                                        <Border Width="56" Height="4" Background="{DynamicResource AccentAlt2Brush}" CornerRadius="2"/>
+                                        <TextBlock Margin="0,16,0,0" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Single file"/>
+                                        <TextBlock Margin="0,10,0,0" FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="Open one file directly or create a new one without switching to a full workspace."/>
+                                    </StackPanel>
+                                </RadioButton>
+                            </WrapPanel>
+                            <Border Margin="0,8,0,0" Background="{DynamicResource PanelBackgroundBrush}" BorderBrush="{DynamicResource ControlBorderBrush}" BorderThickness="1" CornerRadius="8" Padding="18">
+                                <StackPanel>
+                                    <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="{Binding SelectedScenarioHeadline}"/>
+                                    <TextBlock Margin="0,8,0,0" FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="{Binding SelectedScenarioGuidance}"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Visibility="{Binding Step2Visibility}">
+                            <TextBlock FontSize="24" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" Text="{Binding Step2Title}"/>
+                            <TextBlock Margin="0,12,0,0" FontSize="14" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="{Binding Step2Description}"/>
+                            <StackPanel Margin="0,24,0,0" Visibility="{Binding FolderScenarioVisibility}">
+                                <TextBlock FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Workspace folder"/>
+                                <TextBlock Margin="0,8,0,0" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="Choose an existing directory that should become the workspace root."/>
+                                <Grid Margin="0,12,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Margin="0,0,12,0" Style="{StaticResource WizardTextBoxStyle}" Tag="{Binding HasFolderPathError}" Text="{Binding FolderPath, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <Button Grid.Column="1" MinWidth="110" Style="{StaticResource SecondaryButtonStyle}" Click="BrowseFolderPathButton_Click" Content="Browse..."/>
+                                </Grid>
+                                <TextBlock Margin="0,8,0,0" FontSize="12" Foreground="{DynamicResource DangerBorderBrush}" TextWrapping="Wrap" Text="{Binding FolderPathError}" Visibility="{Binding FolderPathErrorVisibility}"/>
+                            </StackPanel>
+                            <StackPanel Margin="0,24,0,0" Visibility="{Binding EncryptedScenarioVisibility}">
+                                <TextBlock FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Storage action"/>
+                                <StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+                                    <RadioButton Content="Open existing" IsChecked="{Binding IsEncryptedOpenExistingSelected, Mode=TwoWay}" GroupName="EncryptedAction" Style="{StaticResource ChoiceChipStyle}"/>
+                                    <RadioButton Content="Create new" IsChecked="{Binding IsEncryptedCreateNewSelected, Mode=TwoWay}" GroupName="EncryptedAction" Style="{StaticResource ChoiceChipStyle}"/>
+                                </StackPanel>
+                                <TextBlock Margin="0,20,0,0" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Storage path"/>
+                                <Grid Margin="0,12,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Margin="0,0,12,0" Style="{StaticResource WizardTextBoxStyle}" Tag="{Binding HasEncryptedPathError}" Text="{Binding EncryptedPath, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <Button Grid.Column="1" MinWidth="110" Style="{StaticResource SecondaryButtonStyle}" Click="BrowseEncryptedPathButton_Click" Content="Browse..."/>
+                                </Grid>
+                                <TextBlock Margin="0,8,0,0" FontSize="12" Foreground="{DynamicResource DangerBorderBrush}" TextWrapping="Wrap" Text="{Binding EncryptedPathError}" Visibility="{Binding EncryptedPathErrorVisibility}"/>
+                                <TextBlock Margin="0,20,0,0" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Password"/>
+                                <PasswordBox Margin="0,12,0,0" Style="{StaticResource WizardPasswordBoxStyle}" Tag="{Binding HasEncryptedPasswordError}" PasswordChanged="EncryptedPasswordBox_PasswordChanged"/>
+                                <TextBlock Margin="0,8,0,0" FontSize="12" Foreground="{DynamicResource DangerBorderBrush}" TextWrapping="Wrap" Text="{Binding EncryptedPasswordError}" Visibility="{Binding EncryptedPasswordErrorVisibility}"/>
+                                <StackPanel Visibility="{Binding EncryptedConfirmationVisibility}">
+                                    <TextBlock Margin="0,20,0,0" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Confirm password"/>
+                                    <PasswordBox Margin="0,12,0,0" Style="{StaticResource WizardPasswordBoxStyle}" Tag="{Binding HasEncryptedConfirmationError}" PasswordChanged="EncryptedConfirmPasswordBox_PasswordChanged"/>
+                                    <TextBlock Margin="0,8,0,0" FontSize="12" Foreground="{DynamicResource DangerBorderBrush}" TextWrapping="Wrap" Text="{Binding EncryptedConfirmationError}" Visibility="{Binding EncryptedConfirmationErrorVisibility}"/>
+                                </StackPanel>
+                                <Border Margin="0,20,0,0" Background="{DynamicResource PanelBackgroundBrush}" BorderBrush="{DynamicResource ControlBorderBrush}" BorderThickness="1" CornerRadius="8" Padding="16">
+                                    <TextBlock FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="{Binding EncryptedDetailsHelpText}"/>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,24,0,0" Visibility="{Binding SingleFileScenarioVisibility}">
+                                <TextBlock FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="File action"/>
+                                <StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+                                    <RadioButton Content="Open existing file" IsChecked="{Binding IsSingleFileOpenExistingSelected, Mode=TwoWay}" GroupName="SingleFileAction" Style="{StaticResource ChoiceChipStyle}"/>
+                                    <RadioButton Content="Create new file" IsChecked="{Binding IsSingleFileCreateNewSelected, Mode=TwoWay}" GroupName="SingleFileAction" Style="{StaticResource ChoiceChipStyle}"/>
+                                </StackPanel>
+                                <TextBlock Margin="0,20,0,0" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="File path"/>
+                                <Grid Margin="0,12,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Margin="0,0,12,0" Style="{StaticResource WizardTextBoxStyle}" Tag="{Binding HasSingleFilePathError}" Text="{Binding SingleFilePath, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <Button Grid.Column="1" MinWidth="110" Style="{StaticResource SecondaryButtonStyle}" Click="BrowseSingleFilePathButton_Click" Content="Browse..."/>
+                                </Grid>
+                                <TextBlock Margin="0,8,0,0" FontSize="12" Foreground="{DynamicResource DangerBorderBrush}" TextWrapping="Wrap" Text="{Binding SingleFilePathError}" Visibility="{Binding SingleFilePathErrorVisibility}"/>
+                                <Border Margin="0,20,0,0" Background="{DynamicResource PanelBackgroundBrush}" BorderBrush="{DynamicResource ControlBorderBrush}" BorderThickness="1" CornerRadius="8" Padding="16">
+                                    <TextBlock FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="{Binding SingleFileDetailsHelpText}"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Visibility="{Binding Step3Visibility}">
+                            <TextBlock FontSize="24" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" Text="Review and launch"/>
+                            <TextBlock Margin="0,12,0,0" FontSize="14" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="The runtime integration can subscribe to one event and receive the validated Quick Start request below."/>
+                            <Border Margin="0,24,0,0" Background="{DynamicResource PanelBackgroundBrush}" BorderBrush="{DynamicResource ControlBorderBrush}" BorderThickness="1" CornerRadius="8" Padding="20">
+                                <StackPanel>
+                                    <TextBlock FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" Text="Scenario"/>
+                                    <TextBlock Margin="0,6,0,0" FontSize="14" Foreground="{DynamicResource TextPrimaryBrush}" TextWrapping="Wrap" Text="{Binding SummaryScenarioText}"/>
+                                    <TextBlock Margin="0,16,0,0" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" Text="Action"/>
+                                    <TextBlock Margin="0,6,0,0" FontSize="14" Foreground="{DynamicResource TextPrimaryBrush}" TextWrapping="Wrap" Text="{Binding SummaryModeText}"/>
+                                    <TextBlock Margin="0,16,0,0" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" Text="Target path"/>
+                                    <TextBlock Margin="0,6,0,0" FontSize="14" Foreground="{DynamicResource TreeFileBrush}" TextWrapping="Wrap" Text="{Binding SummaryPathText}"/>
+                                    <TextBlock Margin="0,16,0,0" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" Text="Security"/>
+                                    <TextBlock Margin="0,6,0,0" FontSize="14" Foreground="{DynamicResource TextPrimaryBrush}" TextWrapping="Wrap" Text="{Binding SummarySecurityText}"/>
+                                    <Border Margin="0,20,0,0" Background="{DynamicResource SurfaceMutedBackgroundBrush}" BorderBrush="{DynamicResource ControlBorderBrush}" BorderThickness="1" CornerRadius="8" Padding="16">
+                                        <TextBlock FontSize="13" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="{Binding SummaryLaunchNote}"/>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" MinWidth="110" Style="{StaticResource SecondaryButtonStyle}" Click="BackButton_Click" IsEnabled="{Binding CanGoBack}" Content="Back"/>
+                    <StackPanel Grid.Column="1" Margin="16,0" VerticalAlignment="Center">
+                        <TextBlock FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Text="{Binding StepCaption}"/>
+                        <TextBlock Margin="0,4,0,0" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Text="{Binding FooterHint}"/>
+                    </StackPanel>
+                    <Grid Grid.Column="2">
+                        <Button MinWidth="140" Style="{StaticResource SecondaryButtonStyle}" Visibility="{Binding NextButtonVisibility}" IsEnabled="{Binding CanGoNext}" Click="NextButton_Click" Content="Next"/>
+                        <Button MinWidth="190" Style="{StaticResource AccentButtonStyle}" Visibility="{Binding LaunchButtonVisibility}" IsEnabled="{Binding CanLaunch}" Click="LaunchButton_Click" Content="{Binding LaunchButtonText}"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Page>
